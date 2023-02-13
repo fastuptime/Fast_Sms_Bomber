@@ -4,8 +4,9 @@ const title = require('./title.js');
 const moment = require('moment');
 const faker = require('faker');
 
+async function delay(s) { return new Promise(resolve => setTimeout(resolve, s * 1000)); }
 
-function smsBOOM(numara, miktar) {
+async function smsBOOM(numara, miktar) {
     let dataFSms = {
         baslangic_tarihi: moment().format('DD.MM.YYYY HH:mm:ss'),
         numara: numara,
@@ -31,6 +32,7 @@ function smsBOOM(numara, miktar) {
                 dataFSms.basarili++;
                 console.log(`[+] Kigili - ${no} - ${dataFSms.basarili}`.green);
             } else {
+                // console.log(body);
                 dataFSms.hatali++;
                 console.log(`[-] Kigili - ${no} - ${dataFSms.hatali}`.red);
             }
@@ -39,6 +41,7 @@ function smsBOOM(numara, miktar) {
     }
 
     for (let i = 0; i < miktar; i++) {
+        await delay(1);
         kigili(numara);
     }
 
