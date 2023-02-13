@@ -13,6 +13,7 @@ if (telefon.length != 10) {
 title('Numara: ' + telefon);
 
 let miktar = rl.question("Kac Adet SMS Gondermek Istiyorsunuz: ".green);
+if(isNaN(miktar)) return console.log('Lutfen Bir Rakam Giriniz'.red) && process.exit(1);
 if (miktar.length == 0) {
     console.log('Miktar Giriniz'.red);
     process.exit(1);
