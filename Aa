@@ -1,0 +1,11 @@
+pkg install nodejs
+
+apt upgrade
+
+git clone https://github.com/fastuptime/Fast_Sms_Bomber
+
+cd Fast_Sms_Bomber
+
+npm install
+
+node index.js
