@@ -1,31 +1,47 @@
 # Fast_Sms_Bomber
+Fast Sms Bomber For Turkey
 
-## Resimler
+# 🎈 Images 🎈
 
 ![image](https://user-images.githubusercontent.com/63351166/218465842-a8480b01-4a80-448f-831b-1d1d837f1c1f.png)
+
 ![image](https://user-images.githubusercontent.com/63351166/218466149-0429c3ed-2d03-4c08-9ebc-cf78c4eb82f8.png)
+
 ![image](https://user-images.githubusercontent.com/63351166/218466292-e058112b-0b81-4af9-bec9-70528ad8958e.png)
 
-## Notlar
+## 📜 Notes 📜
 
-- Eğitim Amaçlı Yapılmıştır.
-- Saldırı Amaçlı Kullanmak Suçtur.
-- Eğitim Amaçlı Olduğu İçin Sadece 10 Sitenin Açıklarından Faydalanılmıştır.
-- Siteler Captcha/Anti Bot/Vb. Kullanmadığı İçin Bu Açıklardan Kolayca Faydalanabilirsiniz.
-- Siteler Bu Tür Sistemleri Engelllemek İçin En Azından Captcha Kullanabilirler.
-- Bu Tür Sistemler Birden Fazla Site İçin Yapılabilir. Bu Şekilde Bir Hedefi Rahtsız Edebilir.
+- It was made for educational purposes.
+- It is an offence to use it for attack purposes.
+- For Educational Purposes, Only 10 Sites are Utilised for Educational Purposes.
+- Sites Captcha / Anti Bot / Etc. You can easily exploit these vulnerabilities because it does not use.
+- Sites can use at least Captcha to block such systems.
+- Such systems can be done for more than one site. In this way, it can disturb a target.
 
-## Tech Stack
 
-**Server:** Node, Faker, Colors, Request
+# 🛠️ Installation 🛠️
+
+- Download and install [NodeJs](https://nodejs.org/en/download) on your computer.
+- Download the project as Zip to your computer and unzip it.
+- Enter the folder you extracted from the zip and open a terminal to the location of that folder, then enter the following commands.
+`npm install`
+- Enter your token in the config.js file. If you don't have a token, create a Bot via BotFather and copy the token.
+- Start the bot by entering the following command in Terminal
+`node .`
+
+## ⛳Tech Stack ⛳
+
+**🗄️Server:** Node, Faker, Colors, Request
 
 ---
-- ✨ [Destek İçin](https://fastuptime.com) <br>
+- ✨ [For Support](https://github.com/sponsors/fastuptime) <br>
 - 💕 [Discord](https://fastuptime.com/discord)<br>
-- 🎖️ [FasterHost Technology](https://fasterhost.tech/)<br>
-- ✨ İletişim için [Tıkla!](mailto:fastuptime@gmail.com)<br>
+- 🏓 [Fast Uptime](https://fastuptime.com/)<br>
+- 🪄 All kinds of projects are made <br>
+- 🧨 You can contact us to make a paid project<br>
+- ☄️ [Click For Contact](mailto:fastuptime@gmail.com)<br>
 
-# License
-- Its protected by Creative Commons ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/))
+# 🎯 License 🎯
+- ⚖️ Its protected by Creative Commons ([CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/))
 
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="BYNCSA40"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"></a>
