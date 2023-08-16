@@ -1,6 +1,13 @@
 # Fast_Sms_Bomber
 Fast Sms Bomber For Turkey
 
+# ✨Features and projects to be added as stars arrive✨
+
+- ~~Sms Bomber As Terminal -> 0 Stars ✨~~ [Done GitHub Link](https://github.com/fastuptime/Fast_Sms_Bomber)
+- ~~Sms Bomber As Discord Bot -> 5 Stars ✨~~ [Done GitHub Link](https://github.com/fastuptime/Fast_Sms_Bomber_Discord)
+- ~~Sms Bomber As API -> 10 Stars ✨~~ [Done GitHub Link](https://github.com/fastuptime/Fast_Sms_Bomber_Api)
+- ~~Panelled Sms Bomber -> 15 Stars ✨~~ [Done GitHub Link](https://github.com/fastuptime/Fast_Sms_Bomber_Panel)
+
 # 🎈 Images 🎈
 
 ![image](https://user-images.githubusercontent.com/63351166/218465842-a8480b01-4a80-448f-831b-1d1d837f1c1f.png)
@@ -25,7 +32,6 @@ Fast Sms Bomber For Turkey
 - Download the project as Zip to your computer and unzip it.
 - Enter the folder you extracted from the zip and open a terminal to the location of that folder, then enter the following commands.
 `npm install`
-- Enter your token in the config.js file. If you don't have a token, create a Bot via BotFather and copy the token.
 - Start the bot by entering the following command in Terminal
 `node .`
 
