@@ -37,7 +37,7 @@ Fast Sms Bomber For Turkey
 
 ## ⛳Tech Stack ⛳
 
-**🗄️Server:** Node, Faker, Colors, Request
+**🗄️Server:** Node, Faker.js, Colors, Request
 
 ---
 - ✨ [For Support](https://github.com/sponsors/fastuptime) <br>
