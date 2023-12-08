@@ -35,6 +35,8 @@ Fast Sms Bomber For Turkey
 - Start the bot by entering the following command in Terminal
 `node .`
 
+https://www.youtube.com/watch?v=YLlNbtzbWgA&feature=youtu.be
+
 ## ⛳Tech Stack ⛳
 
 **🗄️Server:** Node, Faker.js, Colors, Request
