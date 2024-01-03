@@ -1,0 +1,5 @@
+cd Fast_Sms_Bomber
+
+npm install
+
+node index.js
