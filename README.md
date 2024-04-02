@@ -7,6 +7,8 @@ Fast Sms Bomber For Turkey
 - ~~Sms Bomber As Discord Bot -> 5 Stars ✨~~ [Done GitHub Link](https://github.com/fastuptime/Fast_Sms_Bomber_Discord)
 - ~~Sms Bomber As API -> 10 Stars ✨~~ [Done GitHub Link](https://github.com/fastuptime/Fast_Sms_Bomber_Api)
 - ~~Panelled Sms Bomber -> 15 Stars ✨~~ [Done GitHub Link](https://github.com/fastuptime/Fast_Sms_Bomber_Panel)
+- ~~Fast Sms Bomber Module Test -> 40 Stars ✨~~ [Done GitHub Link](https://github.com/fastuptime/Fast_Sms_Bomber_Module)
+
 
 # 🎈 Images 🎈
 
