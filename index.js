@@ -2,8 +2,17 @@ const rl = require('readline-sync');
 const colors = require('colors');
 const title = require('./modules/title.js');
 const fastBomber = require('./modules/sms.js');
+global.request = require('request');
+global.axios = require('axios');
+global.faker = require('faker');
+global.dayjs = require('dayjs');
+global.fs = require('fs');
+global.chalk = require('chalk');
 
-title('Hosgeldiniz');
+title('github.com/fastuptime - SMS Bomber v1.0');
+console.log(`
+Github'dan takip etmeyi unutmayin: github.com/fastuptime
+`.yellow);
 
 let telefon = rl.question('Telefon Numarasi Giriniz +90: ' .green);
 if (telefon.length != 10) {

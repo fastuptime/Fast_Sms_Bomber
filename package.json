@@ -11,7 +11,10 @@
   "author": "Can & FastUptime",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.8",
+    "chalk": "^4.1.2",
     "colors": "^1.4.0",
+    "dayjs": "^1.11.10",
     "faker": "^5.5.3",
     "moment": "^2.29.4",
     "readline-sync": "^1.4.10",
