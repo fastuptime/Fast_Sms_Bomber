@@ -1,3 +1,9 @@
+# ✨ SPEEDSMM VERSIYON 5 YAYINDA 1 AYLIK UCRETSIZ KULLANIM ICIN [TIKLA](https://speedsmm.com) ✨
+
+# ✨ SPEEDSMM VERSION 5 IS LIVE FOR 1 MONTH FREE USE [CLICK](https://speedsmm.com) ✨
+
+
+
 # Fast_Sms_Bomber
 Fast Sms Bomber For Turkey
 
